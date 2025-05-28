@@ -10,7 +10,6 @@ router.get("/complexes", async (req, res) => {
     let query = "SELECT * FROM complex";
     const params = [];
 
-    // Filtrar por ubicación si se proporciona un idlocation
     if (req.query.location) {
       query += " WHERE idlocation = ?";
       params.push(req.query.location);
